@@ -66,7 +66,7 @@ def generate_job_report(SOC_list, occupationReport):
 def main():
     if len(sys.argv) != 4:
         print 'You failed to provide input and output files!'
-        sys.exit(1)  # abort because of error
+        sys.exit(1)   # abort because of error
     else:
         inputFile = sys.argv[1]
         occupation_out = sys.argv[2]
