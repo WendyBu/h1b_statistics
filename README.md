@@ -1,59 +1,56 @@
 # Insight Coding Challenge Submission
 H1B Statistics Counting
 1. [Introduction](README.md#Introduction)
-2. [Data sources](README.md#Data_source)
-3. [Instruction](README.md#instructions)
+2. [Data Source](README.md#Data_Source)
+3. [Instructions](README.md#instructions)
 4. [Examples](README.md#Examples)
 
 
 
 # Introduction
 
-Researching immigration data trends on H1B visa application, identify the occupations and states with the top10 most number of approved H1B visas. 
+Researching immigration data trends on H1B visa application, identify the top10 occupations and states of certified H1B visas. 
 
 
-# Data Sources
-Data available from the US Department of Labor and its [Office of Foreign Labor Certification Performance Data](https://www.foreignlaborcert.doleta.gov/performancedata.cfm#dis). 
+# Data_Source
+Data are available from the US Department of Labor and its [Office of Foreign Labor Certification Performance Data](https://www.foreignlaborcert.doleta.gov/performancedata.cfm#dis). 
 
 **File Structure**
 
-The archived dataset are using different column names. Listed as below:
+The archived datasets are using different column names. Listed as below:
 
-**STATUS**
+**1.STATUS**
 
-STATUS: Status associated with the last significant event or decision. Valid values include “Certified,” “Certified-Withdrawn,” Denied,” and “Withdrawn”.  In this case, we only consider "Certified" 
+_`STATUS`_: Status associated with the last significant event or decision. Valid values include “Certified,” “Certified-Withdrawn,” Denied,” and “Withdrawn”.  In this case, we only consider "Certified" 
 H1B application. 
 
-CASE_STATUS: Status associated with the last significant event or decision. Valid values include “Certified,” “Certified-Withdrawn,” Denied,” and “Withdrawn”.
+_`CASE_STATUS`_: Status associated with the last significant event or decision. Valid values include “Certified,” “Certified-Withdrawn,” Denied,” and “Withdrawn”.
+
+**2.STATES**
+
+_`WORKSITE_STATE`_: State information of the foreign worker's intended area of employment
+
+_`LCA_CASE_WORKLOC1_STATE`_: Address information of the intended are in which the foreign worker is expected to be employed (location of the job opening)
+
+**3.OCCUPATION**
+
+_`SOC_NAME`_: Occupational name associated with the SOC_CODE
+
+_`LCA_CASE_SOC_NAME`_: Title of the SOC occupational group
 
 
-**STATES**
-
-WORKSITE_STATE: State information of the foreign worker's intended area of employment
-
-LCA_CASE_WORKLOC1_STATE: Address information of the intended are in which the foreign worker is expected to be employed (location of the job opening)
-
-
-**OCCUPATION**
-
-SOC_NAME : Occupational name associated with the SOC_CODE
-
-LCA_CASE_SOC_NAME : Title of the SOC occupational group
-
-
-
-# Instruction
+# Instructions
 
 Usage:
 Python 2.7, no external library needed. 
 ```
-python h1b_counting.py input_file top_10_occupations_output top_10_states_output
+python src/h1b_counting.py input_file top_10_occupations_output top_10_states_output
 ```
-Note: Provide relative paths for each file. These three files are required, not optional. 
+Note: Provide relative paths for each file. One input and two output files are required, not optional. 
 
-**input file**:  .csv , delimitered by ";"
+**INPUT FILE**:  .csv , delimited by ";"
 
-**output files**:
+**OUTPUT FILES**:
 
 This program  create 2 output files:
 * `top_10_occupations.txt`: Top 10 occupations for certified visa applications
@@ -117,7 +114,7 @@ NJ;1;10.0%
 TX;1;10.0%
 WA;1;10.0%
 ``` 
-This repo contains 5 test sets. test_1 is default. 
+This repo contains 5 test sets. test_1 is as above. 
 
 test_2_2014data: first 500 rows of 2014 H-1B data provided in google drive
 
@@ -125,7 +122,7 @@ test_3_2015data: first 2000 rows of 2015 H-1B data provided in google drive
 
 test_4_2016data: first 5000 rows of 2016 H1-B data provided in google drive
 
-test_5: 20 rows inside.
+test_5: 20 rows of 2014 data.
 
 
 
@@ -137,7 +134,7 @@ The directory structure for this project look like this:
       ├── run.sh
       ├── src
       │   └──h1b_counting.py
-          |--__init__.py
+      |   |--__init__.py
       ├── input
       │   └──h1b_input.csv
       ├── output
