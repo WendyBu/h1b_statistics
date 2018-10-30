@@ -4,7 +4,7 @@ H1B Statistics Counting
 2. [Data sources](README.md#Data_source)
 3. [Instruction](README.md#instructions)
 4. [Examples](README.md#Examples)
-5. [Contact Information](README.md#Contact Information)
+
 
 
 # Introduction
