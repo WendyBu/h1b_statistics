@@ -1,3 +1,7 @@
+# data source: H-1B data from United State Department of Labor
+# calculate two metrics: Top 10 Occupations and Top 10 States for certified H-1B visa applications.
+# Usage: python ./src/h1b_counting.py ./input/h1b_input.csv ./output/top_10_occupations.txt ./output/top_10_states.txt
+
 import sys, csv
 from collections import Counter
 
@@ -99,9 +103,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-#python ./src/h1b_counting.py ./input/h1b_input.csv ./output/top_10_occupations.txt ./output/top_10_states.txt
-#python ./src/h1b_counting.py ./insight_testsuite/tests/test_4_2016data/input/h1b_input.csv ./output/top_10_occupations.txt ./output/top_10_states.txt
-#python ./src/h1b_counting.py ./insight_testsuite/tests/test_2_2014data/input/h1b_input.csv ./output/top_10_occupations.txt ./output/top_10_states.txt
