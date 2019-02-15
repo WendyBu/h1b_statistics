@@ -1,7 +1,7 @@
 # Insight Coding Challenge Submission
 H1B Statistics Counting
 1. [Introduction](README.md#Introduction)
-2. [Data Source](README.md#DataU+FFFDSource)
+2. [Data Source](README.md#Data%U+FFFDSource)
 3. [Instructions](README.md#instructions)
 4. [Examples](README.md#Examples)
 
