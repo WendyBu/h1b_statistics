@@ -1,7 +1,7 @@
 # Insight Coding Challenge Submission
 H1B Statistics Counting
 1. [Introduction](README.md#Introduction)
-2. [Data Source](README.md#Data_Source)
+2. [Data Source](README.md#DataU+0020Source)
 3. [Instructions](README.md#instructions)
 4. [Examples](README.md#Examples)
 
@@ -12,7 +12,7 @@ H1B Statistics Counting
 Researching immigration data trends on H1B visa application, identify the top10 occupations and states of certified H1B visas. 
 
 
-# Data_Source
+# Data Source
 Data are available from the US Department of Labor and its [Office of Foreign Labor Certification Performance Data](https://www.foreignlaborcert.doleta.gov/performancedata.cfm#dis). 
 
 **File Structure**
